@@ -17,8 +17,7 @@ int partition(int a[], int low, int high) {
 	temp = a[i+1];
 	a[i+1] = a[high];
 	a[high] = temp;
-	return i+1;
-
+	return (i+1);
 }
 
 void quick_sort(int a[], int low, int high) {
@@ -36,9 +35,10 @@ int main() {
 	for(int i=0; i<N; i++) {
 		cin >> a[i];
 	}
-	quick_sort(a, 0, N);
+	quick_sort(a, 0, N-1);
 	for(int i=0; i<N; i++) {
 		cout << a[i] << " ";
 	}
+	cout << endl;
 	return 0;
 }
